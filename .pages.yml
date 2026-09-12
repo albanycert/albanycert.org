@@ -1,0 +1,100 @@
+# Pages CMS configuration — https://pagescms.org/docs/configuration/
+# Field names here must match the Zod schemas in src/content.config.ts.
+
+media:
+  input: "public/images"
+  output: "/images"
+
+content:
+  - name: pages
+    label: "Pages"
+    type: collection
+    path: "src/content/pages"
+    format: yaml-frontmatter
+    subfolders: false
+    fields:
+      - { name: title, label: "Title", type: string }
+      - { name: updated, label: "Last updated", type: date }
+      - { name: description, label: "Description", type: string, required: false }
+      - { name: body, label: "Body", type: rich-text }
+
+  - name: training
+    label: "Training"
+    type: collection
+    path: "src/content/training"
+    format: yaml-frontmatter
+    subfolders: false
+    fields:
+      - { name: title, label: "Title", type: string }
+      - { name: updated, label: "Last updated", type: date }
+      - { name: start_date, label: "Start date", type: date }
+      - { name: end_date, label: "End date", type: date }
+      - name: class_dates
+        label: "Class dates"
+        type: object
+        list: true
+        fields:
+          - { name: value, label: "Date", type: date }
+      - { name: location, label: "Location", type: string }
+      - { name: registration_url, label: "Registration URL", type: string }
+      - name: status
+        label: "Status"
+        type: select
+        options: { values: [open, waitlist, closed] }
+      - { name: capacity, label: "Capacity", type: number, required: false }
+      - { name: body, label: "Body", type: rich-text }
+
+  - name: announcements
+    label: "Announcements"
+    type: collection
+    path: "src/content/announcements"
+    format: yaml-frontmatter
+    subfolders: false
+    fields:
+      - { name: title, label: "Title", type: string }
+      - { name: date, label: "Date", type: date }
+      - { name: updated, label: "Last updated", type: date }
+      - { name: pinned, label: "Pinned", type: boolean, default: false }
+      - { name: body, label: "Body", type: rich-text }
+
+  - name: meetings
+    label: "Meetings"
+    type: collection
+    path: "src/content/meetings"
+    format: yaml-frontmatter
+    subfolders: false
+    fields:
+      - { name: title, label: "Title", type: string }
+      - { name: updated, label: "Last updated", type: date }
+      - { name: date, label: "Date", type: date }
+      - { name: time, label: "Time", type: string }
+      - { name: location, label: "Location", type: string }
+      - { name: agenda_url, label: "Agenda URL", type: string, required: false }
+      - { name: zoom_url, label: "Zoom URL", type: string, required: false }
+      - { name: body, label: "Body", type: rich-text }
+
+  - name: gallery
+    label: "Gallery"
+    type: collection
+    path: "src/content/gallery"
+    format: yaml-frontmatter
+    subfolders: false
+    fields:
+      - { name: title, label: "Album title", type: string }
+      - { name: updated, label: "Last updated", type: date }
+      - { name: date, label: "Date", type: date }
+      - name: kind
+        label: "Kind"
+        type: select
+        options: { values: [training, event, meeting, other] }
+      - { name: cover, label: "Cover image", type: image }
+      - name: photos
+        label: "Photos"
+        type: object
+        list: true
+        fields:
+          - { name: src, label: "Image", type: image }
+          - { name: alt, label: "Alt text", type: string }
+          - { name: caption, label: "Caption", type: string, required: false }
+          - { name: credit, label: "Credit", type: string, required: false }
+      - { name: body, label: "Notes", type: rich-text, required: false }
