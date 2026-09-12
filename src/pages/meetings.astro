@@ -1,0 +1,23 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+
+const items = (await getCollection('meetings')).sort(
+  (a, b) => a.data.date.valueOf() - b.data.date.valueOf()
+);
+const dateFmt = new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+---
+<Layout title="Meetings">
+  <h1>Meetings</h1>
+  {items.length === 0 && <p>No meetings scheduled.</p>}
+  <ul>
+    {items.map((m) => (
+      <li>
+        <strong>{dateFmt.format(m.data.date)}</strong>, {m.data.time} — {m.data.title}
+        {' — '}{m.data.location}
+        {m.data.agenda_url && <> · <a href={m.data.agenda_url}>Agenda</a></>}
+        {m.data.zoom_url && <> · <a href={m.data.zoom_url}>Zoom</a></>}
+      </li>
+    ))}
+  </ul>
+</Layout>

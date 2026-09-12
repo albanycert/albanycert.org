@@ -1,0 +1,11 @@
+---
+import { getEntry, render } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+
+const page = await getEntry('pages', 'radio-club');
+if (!page) throw new Error('radio-club page content missing');
+const { Content } = await render(page);
+---
+<Layout title={page.data.title} description={page.data.description}>
+  <Content />
+</Layout>

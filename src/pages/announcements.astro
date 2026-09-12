@@ -1,0 +1,23 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+
+const items = (await getCollection('announcements')).sort((a, b) => {
+  if (a.data.pinned !== b.data.pinned) return a.data.pinned ? -1 : 1;
+  return b.data.date.valueOf() - a.data.date.valueOf();
+});
+const dateFmt = new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+---
+<Layout title="Announcements">
+  <h1>Announcements</h1>
+  {items.length === 0 && <p>No announcements yet.</p>}
+  <ul>
+    {items.map((a) => (
+      <li>
+        <strong>{dateFmt.format(a.data.date)}</strong>
+        {' — '}{a.data.title}
+        {a.data.pinned && ' 📌'}
+      </li>
+    ))}
+  </ul>
+</Layout>

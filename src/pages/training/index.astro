@@ -1,0 +1,24 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+const offerings = (await getCollection('training')).sort(
+  (a, b) => b.data.start_date.valueOf() - a.data.start_date.valueOf()
+);
+---
+<Layout title="Training">
+  <h1>CERT Training</h1>
+  <p>
+    Community Emergency Response Team (CERT) training teaches Albany residents the skills
+    to lead local operations during a disaster until professional responders arrive.
+  </p>
+  <ul>
+    {offerings.map((t) => (
+      <li>
+        <a href={`/training/${t.id}`}>{t.data.title}</a>
+        {' — '}
+        <strong>{t.data.status}</strong>
+      </li>
+    ))}
+  </ul>
+</Layout>

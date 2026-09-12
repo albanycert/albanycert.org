@@ -69,7 +69,10 @@ without Raymond's explicit go:
 - [ ] Connect this repo to Cloudflare Pages (production + preview deployments)
 - [ ] Connect Pages CMS to this repo (GitHub App install + OAuth — Raymond's own click)
 - [ ] Turn on branch protection on `main` (require PR + required status check) —
-      run the Pages CMS coexistence spike (§6 of the agent-operable design note) first
+      run the Pages CMS coexistence spike (§6 of the agent-operable design note) first.
+      Note: GitHub's branch protection rules and repository rulesets are available on the
+      free plan for **public** repos (this repo is public) — private repos on the free
+      plan don't get this; keep that in mind if the repo's visibility is ever revisited.
 - [ ] DNS cutover: point the real `albanycert.org` at Cloudflare Pages (currently sits in
       Raymond's personal Cloudflare account — see [[Albany CERT Compliance Calendar]])
 - [ ] Apply for GitHub's nonprofit plan for the `albanycert` org
