@@ -55,11 +55,7 @@ header.site { background: var(--cert-green); color: #fff; border-bottom: 4px sol
   font-weight: 800; font-size: 1.25rem; letter-spacing: 0.02em;
   color: #fff; text-decoration: none; margin-right: auto;
 }
-.site-nav .brand .mark {
-  display: inline-grid; place-items: center; width: 2rem; height: 2rem;
-  background: #fff; color: var(--cert-green); border-radius: 6px;
-  font-size: 0.7rem; font-weight: 900; letter-spacing: 0.04em;
-}
+.site-nav .brand img { height: 3.5rem; width: auto; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.35); }
 .site-nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0.25rem 0.25rem; padding: 0; margin: 0; }
 .site-nav ul a {
   display: inline-block; padding: 0.35rem 0.6rem; border-radius: 4px;
