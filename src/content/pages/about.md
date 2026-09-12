@@ -4,11 +4,20 @@ updated: 2026-09-12
 description: "Who we are and what we do."
 ---
 
-Albany CERT was established in March 2021 as a California nonprofit corporation with
-501(c)(3) status. Our mission is to expand the safety and well-being of Albany residents,
-and to support Albany emergency preparedness. We work in collaboration with the Albany Fire
-Department, CERT training programs, neighborhood Block Captains, a radio club, and Albany
-residents.
+Albany CERT (Community Emergency Response Team) was established in March 2021 as a
+California nonprofit public benefit corporation with federal 501(c)(3) tax-exempt status
+(EIN 86-2658175). Our mission is to expand the safety and well-being of Albany residents
+and to support Albany's emergency preparedness, in partnership with the Albany Fire
+Department.
 
-*(Ported verbatim from the "ABOUT" section of the live Google Sites home page,
-2026-09-12. Raymond will revise this text.)*
+We coordinate four groups: CERT-trained residents, neighborhood Block Captains, the Albany
+CERT Radio Club, and the Albany Fire Department itself.
+
+## Board
+
+- **Blake Yeaman** — President
+- **Michael Gold** — Vice President
+- **Nick Peterson** — Treasurer
+- **Raymond Yee** — Secretary
+
+<!-- verify: board list current as of 2026-09-12, sourced from [[Albany CERT — Volunteer Roles Inventory (CC, 2026-09-12)]]; confirm before publishing that all four are comfortable being named -->
