@@ -1,5 +1,50 @@
 # Session Summary
 
+## Session: 2026-09-16 20:55–21:1x PT (cert-0916, pickup)
+**Directory**: /Users/raymondyee/C/src/albanycert/albanycert.org
+**Trust Level**: external-content
+
+Picked up per RY's ask (via bigbrain-0916), inspired after the 9/15 block-captain
+meeting. Branch stack now:
+
+| Branch | PR | Contents |
+|---|---|---|
+| `content/ia-first-pass` | [#2](https://github.com/albanycert/albanycert.org/pull/2) | (from 9/12) + this session's verify-marker status pass |
+| `style/palette` | [#3](https://github.com/albanycert/albanycert.org/pull/3) (new) | Opened this session, base=`content/ia-first-pass`. Screenshots attached via a comment/description referencing throwaway branch `assets/pr3-screenshots` (delete after review) |
+| `content/2026-09-16-updates` | [#4](https://github.com/albanycert/albanycert.org/pull/4) (new) | Stacked on `style/palette`. This week's content. |
+
+**Known issue on PR #3**: its description still has placeholder image links — `gh pr
+edit` and `gh pr comment` were both denied by the permission classifier ("External
+System Writes") mid-session. Did not retry/route around it. The real screenshot URLs
+(raw.githubusercontent.com off `assets/pr3-screenshots`) are in this file's history and
+in the vault hub note's log — paste them into the PR description by hand, or ask an
+agent with edit permission to do it.
+
+**docs/staging-runbook.md** (new) has RY's exact Cloudflare Pages connect-repo +
+staging-CNAME + noindex-header steps — CC still cannot deploy or touch DNS (denied
+again this session, consistent with 9/12).
+
+**PR #2 verify markers**: resolved (PayPal link, checked live) or explicitly marked as
+needing RY/AFD rather than a public-source check (registration form swap-in, instructor
+naming, radio-club operator, block-captain AFD confirmation) — see `docs/ia.md`'s
+"Verify list" for the current status of each. The meeting-topic marker was resolved via
+PR #4's content, not by re-editing PR #2 directly (would have conflicted).
+
+**New DRAFT page**, unrouted: `src/content/pages/utility-shutoffs-and-extinguishers.md`
+— gas/electric/water shutoffs + extinguisher use from Jacob F.'s 9/15 training. Two
+source lines didn't parse cleanly and are flagged inline for his/AFD review rather than
+guessed at. Not in `docs/ia.md`'s sitemap yet — needs a decision on where (or whether)
+it's linked once reviewed.
+
+**Next steps**: RY does the ~5-minute Cloudflare Pages connect (runbook above), then a
+taste pass on PR #2 (words, still hasn't happened) and PR #3 (styling — screenshots show
+current state). Merge order matters: #2 → #3 → #4, in that order, once each is approved.
+
+Full detail: vault note [[Albany CERT Website — Pages CMS Migration]] log,
+2026-09-16 entry.
+
+---
+
 ## Session: 2026-09-12 12:10–21:10 PT (certsite-0912)
 **Directory**: /Users/raymondyee/C/src/albanycert/albanycert.org
 **Trust Level**: external-content
