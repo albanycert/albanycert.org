@@ -1,6 +1,6 @@
 ---
 title: "Albany CERT"
-updated: 2026-09-12
+updated: 2026-09-16
 description: "Community Emergency Response Team for Albany, California."
 ---
 
@@ -9,9 +9,10 @@ the first hours of a disaster, before professional responders can reach everyone
 alongside four coordinated groups: CERT-trained residents, neighborhood Block Captains, the
 Albany CERT Radio Club, and the Albany Fire Department.
 
-**Fall 2026 CERT Training is full — a wait list is open.** Eight free Thursday evenings,
-September 10 through November 5, at the Albany Community Center. See [Training](/training)
-to join the wait list for this class or be notified about the next one.
+**Fall 2026 CERT Training has started, and we don't have any further openings.** Eight
+free Thursday evenings, September 10 through November 5, at the Albany Community Center.
+See [Training](/training) to join the wait list — wait-list members get an early
+heads-up on the next class.
 
 **Next community meeting:** Wednesday, September 30, 7:00–8:30pm, Albany Senior Center
 Multi-Purpose Room. See [Meetings](/meetings).
