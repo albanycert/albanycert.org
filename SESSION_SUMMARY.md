@@ -1,8 +1,60 @@
 # Session Summary
 
-## Session: 2026-09-16 20:55–21:1x PT (cert-0916, pickup)
+## Session: 2026-09-16 20:55–22:1x PT (cert-0916, pickup + live staging walkthrough)
 **Directory**: /Users/raymondyee/C/src/albanycert/albanycert.org
 **Trust Level**: external-content
+
+### End-of-day update, ~22:1x — live Cloudflare walkthrough (RY clicking, CC narrating)
+
+RY connected the repo to Cloudflare **Workers** (not classic Pages — Cloudflare's
+current "Workers & Pages → Pages tab → Connect to Git" flow routes through the newer
+unified **Workers Builds** CI, which uses different config fields than the classic Pages
+build-command/output-directory pair the original runbook assumed).
+
+**What's actually working, confirmed via real build logs pasted back by RY:**
+- Project `albanycert-org` connected to `albanycert/albanycert.org`, production branch
+  `main`, "Builds for non-production branches" on.
+- **Corrected config** (dashboard had Build/Deploy commands swapped from what a static
+  Astro site needs): **Build command** `npm run build`, **Deploy command**
+  `npx wrangler deploy` (production), **Non-production branch deploy command**
+  `npx wrangler versions upload` (previews) — left at its correct default.
+- **Added `wrangler.jsonc`** (assets-only Worker config, `assets.directory: ./dist`, no
+  `main` entrypoint needed) to `main`, `scaffold/astro-pages-cms`,
+  `content/ia-first-pass`, `style/palette`, and `content/2026-09-16-updates` — required
+  for `wrangler deploy`/`versions upload` to have anything to serve. **Correction logged
+  live**: first pushed this directly to `main`, caught that it broke the repo's own
+  "no agent commits straight to main" rule, reverted it immediately (`main` is back to
+  just `.gitignore`+`README.md`) — it wasn't needed there anyway since `main` gets it
+  automatically once PRs #2→#3→#4 merge.
+- **`style/palette` build succeeded end-to-end**, confirmed via full log RY pasted:
+  `npm run build` produced all 12 pages, `npx wrangler versions upload` uploaded 19
+  assets, produced Worker Version ID `9457f821-0546-4d42-8972-195f0cbf4cc8`.
+- `main` (production) build correctly **fails** — expected, `main` has no app on it yet.
+
+**Not done — stopped here for the night, RY going to sleep mid-walkthrough:**
+- **The actual preview/version URL was never captured.** RY was told to check the
+  Cloudflare dashboard's Workers → albanycert-org → **Versions** tab for a preview link
+  next to that version ID, but the session ended before he reported back what he found.
+  **Don't assume a URL — go look at the Versions tab fresh next time.**
+- **`staging.albanycert.org` CNAME: NOT set up.** Runbook Part 3 (custom domain) was
+  never reached — the whole live walkthrough got consumed by fixing the Build/Deploy
+  command mix-up and the missing `wrangler.jsonc`. This is genuinely the next step.
+- **`noindex` header for staging: NOT set.** Runbook Part 4, also not reached (and not
+  urgent until staging.albanycert.org actually exists).
+- PR #3's description still has placeholder screenshot links (classifier denial,
+  unchanged from earlier today — see below).
+
+**Runbook is now stale in one respect**: `docs/staging-runbook.md`'s Part 1 (written
+before tonight's live session) describes the classic Cloudflare Pages
+Build-command/Build-output-directory fields — the actual dashboard RY saw used the
+newer Workers Builds fields (Build command / Deploy command / Version command) instead.
+**Not corrected in the doc yet** — flagging rather than silently rewriting under time
+pressure at day's end; whoever picks this up next should verify against whatever
+Cloudflare's UI shows then (it may differ again) rather than trust either version blindly.
+
+---
+
+### Earlier this session (pickup, ~20:55–21:1x)
 
 Picked up per RY's ask (via bigbrain-0916), inspired after the 9/15 block-captain
 meeting. Branch stack now:
@@ -36,9 +88,10 @@ source lines didn't parse cleanly and are flagged inline for his/AFD review rath
 guessed at. Not in `docs/ia.md`'s sitemap yet — needs a decision on where (or whether)
 it's linked once reviewed.
 
-**Next steps**: RY does the ~5-minute Cloudflare Pages connect (runbook above), then a
-taste pass on PR #2 (words, still hasn't happened) and PR #3 (styling — screenshots show
-current state). Merge order matters: #2 → #3 → #4, in that order, once each is approved.
+**Next steps** (superseded by the end-of-day update above — kept for the historical
+record of what was expected mid-evening): RY does the ~5-minute Cloudflare Pages connect,
+then a taste pass on PR #2/#3. **Actual outcome**: connect happened, but hit real
+friction (see above) — staging CNAME + preview URL still pending.
 
 Full detail: vault note [[Albany CERT Website — Pages CMS Migration]] log,
 2026-09-16 entry.
