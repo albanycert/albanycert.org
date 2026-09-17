@@ -130,16 +130,30 @@ Home
 
 ## Verify list (flagged inline with `<!-- verify: ... -->` in the pages)
 
-1. Whether Susan Yeaman and Bill Springer being named as instructors on the training
-   page is fine publicly (they're not named on the current live site's visible text,
-   per the site inventory).
-2. Block-captain two-requirement definition is Michael Gold's proposal, not yet
-   confirmed by AFD (Chief Smyser) — marked proposed on the block-captains page.
-3. Fifth-Wednesday meeting topic is still TBD (to be finalized at the Sept 15
-   organizing meeting, per the vault note) — page says "topic to be announced."
-4. Radio club page has no named net-control operator or current activity level beyond
-   the weekly check-in time carried over from the old site — flagged as thin.
-5. Registration URL on the training page is still the `mailto:` placeholder — the
-   README already tracks swapping in the real Google Form URL.
-6. PayPal donation link (`paypal.me/AlbanyCERT`) carried over from the old site,
-   unverified as still active.
+**Status pass, 2026-09-16 (cert-0916):** items below re-checked against public sources
+where that's possible; items needing an internal/human decision (not a fact a web check
+can settle) are marked as such rather than guessed at.
+
+1. **Still open — needs RY/board, not a public-source question.** Whether Susan Yeaman
+   and Bill Springer being named as instructors on the training page is fine publicly
+   (they're not named on the current live site's visible text, per the site inventory).
+2. **Still open — needs AFD, not a public-source question.** Block-captain
+   two-requirement definition is Michael Gold's proposal, not yet confirmed by AFD
+   (Chief Smyser) — marked proposed on the block-captains page. Checked albanyca.gov for
+   a public Block Captain program page 2026-09-16 as a possible corroborating source;
+   found nothing substantive.
+3. **Resolved, in a stacked PR** — topic is now El Niño preparedness (Sept 30 meeting),
+   filled in on `content/2026-09-16-updates` (PR #4, stacked on #3 → #2). Merge in stack
+   order so this lands; don't re-fix directly on this branch, it'll conflict.
+4. **Still open — needs RY, not a public-source question.** Radio club page has no
+   named net-control operator or current activity level beyond the weekly check-in time
+   carried over from the old site — flagged as thin.
+5. **Partly checked, not resolved — needs RY's call.** The live Fall 2026 registration
+   Google Form exists and was found (see the `<!-- verify -->` comment on the training
+   page for the URL) — not swapped in because the class is now wait-list-only, and a
+   "register here" link may misleadingly suggest registration is still open. RY should
+   decide whether to keep the `mailto:` (now correctly routing to the wait list),
+   pre-load the form URL for reuse next time, or something else.
+6. **Resolved.** PayPal donation link (`paypal.me/AlbanyCERT`) checked live 2026-09-16 —
+   returns HTTP 200, resolves to a real paypal.me page. (Confirms the link works, not
+   that the account is still monitored/correct — a web check can't confirm that.)

@@ -10,7 +10,7 @@ neighbors to CERT resources so a block can organize itself in a disaster.
 
 ## What a Block Captain does
 
-<!-- verify: this is Michael Gold's spec from the Aug 5, 2026 AFD/CERT meeting; stated as strikingly minimal and NOT yet confirmed in writing by the Albany Fire Department — proposed, not adopted -->
+<!-- verify: this is Michael Gold's spec from the Aug 5, 2026 AFD/CERT meeting; stated as strikingly minimal and NOT yet confirmed in writing by the Albany Fire Department — proposed, not adopted. NOT resolved 2026-09-16: checked albanyca.gov for a public Block Captain program page as a possible corroborating source — nothing substantive found (a guessed URL 200'd but had no relevant content). Still needs AFD confirmation in writing, not a public-source question. -->
 As proposed by Albany CERT's Vice President, a Block Captain is asked to do just two
 things:
 
