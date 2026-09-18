@@ -10,7 +10,7 @@ const dateFmt = new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric'
 ---
 <Layout title="Announcements">
   <h1>Announcements</h1>
-  {items.length === 0 && <p>No announcements yet.</p>}
+  {items.length === 0 && <p>No announcements right now — check back soon.</p>}
   <ul>
     {items.map((a) => (
       <li>
