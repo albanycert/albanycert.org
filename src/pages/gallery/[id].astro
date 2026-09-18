@@ -1,0 +1,32 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  const albums = await getCollection('gallery');
+  return albums.map((entry) => ({
+    params: { id: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const dateFmt = new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+---
+<Layout title={entry.data.title}>
+  <p><a href="/gallery">&larr; All albums</a></p>
+  <h1>{entry.data.title}</h1>
+  <p>{dateFmt.format(entry.data.date)} · {entry.data.kind}</p>
+  <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:1rem;">
+    {entry.data.photos.map((p) => (
+      <figure style="margin:0;">
+        <img src={p.src} alt={p.alt} style="width:100%; border-radius:4px;" />
+        {(p.caption || p.credit) && (
+          <figcaption style="font-size:0.85rem; color:var(--muted,#5a5a5a); margin-top:0.25rem;">
+            {p.caption}{p.caption && p.credit ? ' · ' : ''}{p.credit}
+          </figcaption>
+        )}
+      </figure>
+    ))}
+  </div>
+</Layout>

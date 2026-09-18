@@ -1,0 +1,41 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  const offerings = await getCollection('training');
+  return offerings.map((entry) => ({
+    params: { id: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+
+const dateFmt = new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+const statusLabel: Record<string, string> = {
+  open: 'Open for registration',
+  waitlist: 'Registration full — wait list open',
+  closed: 'Closed',
+};
+---
+<Layout title={entry.data.title}>
+  <h1>{entry.data.title}</h1>
+  <p>
+    <strong>{statusLabel[entry.data.status]}</strong>
+    {entry.data.capacity ? ` · capacity ${entry.data.capacity}` : ''}
+  </p>
+  <p>
+    {dateFmt.format(entry.data.start_date)} – {dateFmt.format(entry.data.end_date)}<br />
+    {entry.data.location}
+  </p>
+  <h2>Class dates</h2>
+  <ul>
+    {entry.data.class_dates.map((d) => <li>{dateFmt.format(d)}</li>)}
+  </ul>
+  <p>
+    <a href={entry.data.registration_url}>Register / join the wait list</a>
+  </p>
+  <Content />
+</Layout>
