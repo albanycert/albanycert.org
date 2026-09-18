@@ -1,6 +1,6 @@
 ---
 title: "About Albany CERT"
-updated: 2026-09-12
+updated: 2026-09-16
 description: "Who we are and what we do."
 ---
 
@@ -12,6 +12,16 @@ Department.
 
 We coordinate four groups: CERT-trained residents, neighborhood Block Captains, the Albany
 CERT Radio Club, and the Albany Fire Department itself.
+
+<!-- PROPOSED, not RY's final words — lightly cleaned up from his own 2026-09-16
+     reflection for grammar only, not rewritten. RY should edit this directly rather than
+     treat it as finished; the point is his framing, not this exact phrasing. Source:
+     `Albany CERT — Block Captain Quarterly Meeting 2026.09.15 (RY).md` in the vault. -->
+
+Albany CERT's own in-house organizing is not the same thing as the Block Captain program,
+which is run by the Albany Fire Department — but the two have substantial overlap. The
+better Albany CERT researches and organizes itself, the better position it's in to support
+any Block Captain effort AFD launches.
 
 ## Board
 
