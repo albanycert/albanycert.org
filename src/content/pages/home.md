@@ -4,45 +4,32 @@ updated: 2026-09-12
 description: "Community Emergency Response Team for Albany, California."
 ---
 
-**Fall 2026 CERT Training is enrolling now** — eight free Thursday evenings, September 10
-through November 5, at the Albany Community Center. (Registration is full but there is a
-wait list.)
+Albany CERT trains and organizes Albany, California residents to help their neighbors in
+the first hours of a disaster, before professional responders can reach everyone. We work
+alongside four coordinated groups: CERT-trained residents, neighborhood Block Captains, the
+Albany CERT Radio Club, and the Albany Fire Department.
 
-## About
+**Fall 2026 CERT Training is full — a wait list is open.** Eight free Thursday evenings,
+September 10 through November 5, at the Albany Community Center. See [Training](/training)
+to join the wait list for this class or be notified about the next one.
 
-Albany CERT was established in March 2021 as a California nonprofit corporation with
-501(c)(3) status. Our mission is to expand the safety and well-being of Albany residents,
-and to support Albany emergency preparedness. We work in collaboration with the Albany Fire
-Department, CERT training programs, neighborhood Block Captains, a radio club, and Albany
-residents.
+**Next community meeting:** Wednesday, September 30, 7:00–8:30pm, Albany Senior Center
+Multi-Purpose Room. See [Meetings](/meetings).
 
-## CERT Trained Residents
+## What CERT training covers
 
-The CERT program teaches eight core competencies: disaster preparedness, fire safety,
-medical operations, search and rescue, organizational structure, psychological response,
-counterterrorism (terrorism/CERT), and emergency simulation. Training is a 3-hour course,
-once a week, for 8 weeks. Graduates receive a certified CERT backpack. Trained residents
-lead local operations during a disaster until professional responders arrive.
+The FEMA-based CERT curriculum covers disaster preparedness, fire safety, medical
+operations, light search and rescue, team organization, disaster psychology, and terrorism
+awareness, taught over eight 3-hour weekly sessions with a hands-on skills day. Graduates
+are equipped to organize their neighbors and support official responders until they arrive.
 
-## Block Captains
+## Get involved
 
-Block Captains are volunteer neighborhood leaders who coordinate preparedness activities on
-their block — resident inventories, home-preparation discussions, emergency response
-planning, and coordination with CERT resources. To register, email us with your contact
-information and CERT credentials.
+- **Take the training** — see [Training](/training).
+- **Become a Block Captain** — coordinate preparedness on your own block. See
+  [Block Captains](/block-captains).
+- **Join the Radio Club** — emergency communications backup. See [Radio Club](/radio-club).
+- **Donate** — Albany CERT is a 501(c)(3) nonprofit. See [Donate](/donate).
+- **Stay in the loop** — join our [groups.io mailing list](https://groups.io/g/albanycert).
 
-## Albany CERT Radio Club
-
-The Radio Club provides emergency communication support using FRS/GMRS frequencies and ham
-radio. We hold a weekly check-in every Wednesday at 7pm on Channel 19 Simplex.
-
-## Donate to the Albany CERT non-profit
-
-Albany CERT accepts tax-deductible contributions and grant funding. Proceeds support
-training programs, emergency simulations, equipment, and community emergency supplies.
-Tax ID (EIN): 86-2658175.
-
-## Join our mailing list
-
-Stay in the loop with Albany CERT news and events via our
-[groups.io mailing list](https://groups.io/g/albanycert).
+<!-- verify: confirm Susan Yeaman / Bill Springer instructor names are OK to publish before adding them here; source [[CERT Fall 2026 Training]] -->
