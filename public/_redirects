@@ -1,0 +1,25 @@
+# Cloudflare Workers static-assets redirects file.
+# Syntax + status codes (301/302/303/307/308) per:
+# https://developers.cloudflare.com/workers/static-assets/redirects/
+# All redirects below are permanent (301) unless noted.
+
+# --- Old Google Sites (albanycert.org) paths -> new site ---
+# Old site nav was just /home and /fall2026; /survey and /ready were also
+# live (confirmed 2026-09-18 via curl) and are linked from published material.
+/home            /                          301
+/fall2026        /training/fall-2026/       301
+/ready           /during-an-emergency/      301
+/survey          /training/fall-2026/       301
+
+# --- Our own trailing-slash consistency (force 301, pre-empting the ---
+# --- platform's default 307 directory redirect) ---
+/about           /about/               301
+/announcements   /announcements/        301
+/block-captains  /block-captains/       301
+/contact         /contact/             301
+/donate          /donate/               301
+/during-an-emergency /during-an-emergency/ 301
+/gallery         /gallery/              301
+/meetings        /meetings/             301
+/radio-club      /radio-club/           301
+/training        /training/             301
