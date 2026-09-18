@@ -1,0 +1,4 @@
+# Until launch: keep every host serving this build out of search engines.
+# REMOVE THIS BLOCK AT LAUNCH (see docs/go-live-plan.md).
+/*
+  X-Robots-Tag: noindex, nofollow
