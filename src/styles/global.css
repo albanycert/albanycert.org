@@ -1,0 +1,97 @@
+/* Albany CERT palette
+   CERT green anchors on the FEMA CERT logo green (PMS 342, commonly cited as #00573F);
+   the deep shade matches the embroidered cap. City colors are borrowed lightly from
+   albanyca.gov: its dark green (#005b34), mint (#57aa85), bay blue (#074969), and the
+   sun-gold in the city logo (#ecbc34). Listos California (Cal OES) supplies the
+   FEMA-style navy (#003865) and alert red (#b7312c); its gold (#f0b323) is near-identical
+   to Albany's, so one gold serves both. */
+:root {
+  --cert-green: #00573f;
+  --cert-green-deep: #0f3b2c;
+  --cert-green-tint: #e4f0ea;
+  --city-mint: #57aa85;
+  --navy: #003865;
+  --bay-blue: #074969;
+  --alert: #b7312c;
+  --sun: #ecbc34;
+  --ink: #1f1f1f;
+  --muted: #5a5f5c;
+  --paper: #ffffff;
+  --paper-2: #f5f7f5;
+  --line: #dfe5e1;
+  --max: 900px;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.55;
+}
+a { color: var(--navy); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { color: var(--cert-green); }
+h1, h2, h3 { line-height: 1.2; color: var(--cert-green-deep); }
+h1 { font-size: 2rem; margin-top: 0; }
+h2 { font-size: 1.35rem; margin-top: 2rem; }
+h2::after {
+  content: ""; display: block; width: 2.5rem; height: 3px;
+  background: var(--sun); margin-top: 0.35rem; border-radius: 2px;
+}
+img { max-width: 100%; height: auto; }
+hr { border: 0; border-top: 1px solid var(--line); margin: 2rem 0; }
+
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 1.25rem; }
+
+/* Header */
+header.site { background: var(--cert-green); color: #fff; border-bottom: 4px solid var(--sun); }
+.site-nav {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1.25rem;
+  padding: 0.9rem 1.25rem; max-width: var(--max); margin: 0 auto;
+}
+.site-nav .brand {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  font-weight: 800; font-size: 1.25rem; letter-spacing: 0.02em;
+  color: #fff; text-decoration: none; margin-right: auto;
+}
+.site-nav .brand img { height: 3.5rem; width: auto; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.35); }
+.site-nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0.25rem 0.25rem; padding: 0; margin: 0; }
+.site-nav ul a {
+  display: inline-block; padding: 0.35rem 0.6rem; border-radius: 4px;
+  text-decoration: none; color: #fff; font-size: 0.95rem;
+}
+.site-nav ul a:hover { background: rgba(255,255,255,0.14); color: #fff; }
+.site-nav ul a[aria-current="page"] { box-shadow: inset 0 -3px 0 var(--sun); }
+.site-nav ul a.donate { background: var(--sun); color: var(--cert-green-deep); font-weight: 700; }
+.site-nav ul a.donate:hover { background: #f3ca55; }
+
+/* Main */
+main { max-width: var(--max); margin: 0 auto; padding: 2rem 1.25rem 3rem; }
+
+/* Callouts, buttons */
+.notice, main blockquote {
+  margin: 1.5rem 0; padding: 0.9rem 1.1rem;
+  background: var(--cert-green-tint); border-left: 5px solid var(--cert-green);
+  border-radius: 0 6px 6px 0;
+}
+main blockquote p { margin: 0.25rem 0; }
+.btn {
+  display: inline-block; padding: 0.55rem 1.1rem; border-radius: 6px;
+  background: var(--cert-green); color: #fff; font-weight: 700; text-decoration: none;
+}
+.btn:hover { background: var(--cert-green-deep); color: #fff; }
+.btn.sun { background: var(--sun); color: var(--cert-green-deep); }
+.btn.sun:hover { background: #f3ca55; }
+.badge {
+  display: inline-block; padding: 0.1rem 0.55rem; border-radius: 999px;
+  font-size: 0.8rem; font-weight: 700; background: var(--cert-green-tint); color: var(--cert-green-deep);
+}
+.badge.full { background: #fbeecb; color: #6b4d00; }
+.notice.alert { background: #fbe9e8; border-left-color: var(--alert); }
+
+/* Footer */
+footer.site { background: var(--navy); color: #d5dfe9; margin-top: 3rem; }
+footer.site .wrap { padding: 1.75rem 1.25rem; font-size: 0.9rem; }
+footer.site a { color: #fff; }
+footer.site a:hover { color: var(--sun); }
