@@ -5,13 +5,20 @@ import Layout from '../layouts/Layout.astro';
 const items = (await getCollection('meetings')).sort(
   (a, b) => a.data.date.valueOf() - b.data.date.valueOf()
 );
+const now = new Date();
+const upcoming = items.filter((m) => m.data.date.valueOf() >= now.valueOf());
+const past = items
+  .filter((m) => m.data.date.valueOf() < now.valueOf())
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 const dateFmt = new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
 ---
 <Layout title="Meetings">
   <h1>Meetings</h1>
-  {items.length === 0 && <p>No meetings scheduled.</p>}
+
+  <h2>Next meeting</h2>
+  {upcoming.length === 0 && <p>No upcoming meetings scheduled right now — check back soon, or join our <a href="https://groups.io/g/albanycert" target="_blank" rel="noopener">groups.io list</a> for the announcement.</p>}
   <ul>
-    {items.map((m) => (
+    {upcoming.map((m) => (
       <li>
         <strong>{dateFmt.format(m.data.date)}</strong>, {m.data.time} — {m.data.title}
         {' — '}{m.data.location}
@@ -20,4 +27,18 @@ const dateFmt = new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric'
       </li>
     ))}
   </ul>
+
+  {past.length > 0 && (
+    <>
+      <h2>Past meetings</h2>
+      <ul>
+        {past.map((m) => (
+          <li>
+            <strong>{dateFmt.format(m.data.date)}</strong> — {m.data.title}
+            {m.data.agenda_url && <> · <a href={m.data.agenda_url}>Notes</a></>}
+          </li>
+        ))}
+      </ul>
+    </>
+  )}
 </Layout>

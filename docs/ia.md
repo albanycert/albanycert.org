@@ -12,6 +12,23 @@ three. Old-Google-Sites text about mission and history moves off the home page o
 flat (no dropdowns) because the whole site is 9 pages — a volunteer editing it in Pages
 CMS should never need to think about hierarchy.
 
+## Peer-site review addendum (2026-09-18)
+
+A peer-site review of nearby CERT/emergency-prep orgs (BDPNN, Lamorinda CERT, El
+Cerrito–Kensington CERT, and others) surfaced one page this sitemap didn't have and one
+gap worth stating explicitly. Full seven-suggestion tracking: `docs/peer-review-decisions.md`.
+
+- **During an Emergency** (`src/content/pages/during-an-emergency.md`) — a 10th page,
+  not yet in the flat 9-page nav above: "the ground just shook, what now," built only
+  from ready.gov + readyalbany.org + AC Alert. Marked `[DRAFT]`, not linked from the nav
+  — needs AFD/CERT leadership review first (same convention as the utility-shutoffs
+  draft below).
+- **Role-based email recommendation, not adopted:** the review recommends aliases like
+  `registrar@`, `webmaster@`, `treasurer@` once the site has more than one person behind
+  it, following Lamorinda's and BDPNN's pattern. Albany's plan still centers on the
+  single `AlbanyCERT@gmail.com`, which stays right-sized for now — do not create or
+  imply mailboxes that don't exist.
+
 ## Sitemap (9 pages)
 
 ```
