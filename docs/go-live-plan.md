@@ -44,15 +44,19 @@ showing Google Sites until Phase 3, below. Zero risk to what's live today.
 
 ## Phase 2 — Content parity + QA (before cutover, after your taste pass)
 
-1. **Re-diff against the live site.** The content in this repo was ported 9/12 — re-check
-   Home and the Fall 2026 stub against what's *actually live* right now before cutover
-   (Google Sites content can be hand-edited by any board member with access, with no PR
-   trail — it could have silently changed). A 10-minute manual read-through is enough;
-   there's no API/export to automate this diff.
-2. **The 4 embedded images on Home** (per the site inventory: `lh3.googleusercontent.com`
-   hosted, exact URLs/alt text never captured — needs a human with a browser). Decide
-   per-image: recreate on the new site, replace with something better (real event photos
-   are already wanted for the gallery collection), or drop if it was filler.
+1. **Re-diff against the live site — done 2026-09-18.** Full text/link/image capture of
+   `/`, `/fall2026`, `/ready`, `/survey` in `docs/live-site-capture-2026-09-18/` (via
+   `curl`, not a browser — Google Sites' static HTML was readable enough). Home, About,
+   Block Captains, Radio Club, and Donate rewritten to the live wording/section
+   order/headings; nav reordered to put Training first (the live site's only other nav
+   item besides Home). See PR "Content parity: match the live albanycert.org wording,
+   structure and nav" for the full page-by-page diff. Re-run this before actual cutover
+   if more than a few weeks pass, since Google Sites can be hand-edited with no PR trail.
+2. **The 4 embedded images on Home** — 1 of 4 recovered (`public/images/live-home-hero.jpg`,
+   now on the new Home page); the other 3 `lh7-us.googleusercontent.com` URLs 403'd on a
+   plain `curl` fetch (Google's CDN token appears to need an authenticated Sites
+   session). Still needs a human with a browser to save-image the remaining 3 and decide
+   whether to use them or lean on the gallery collection instead.
 3. **Resolve every open `<!-- verify -->` marker** across PRs #2–#4 — either your decision
    or AFD's, tracked in `docs/ia.md`'s "Verify list." Don't cut over with unresolved
    placeholder/mailto links if avoidable.

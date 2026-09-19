@@ -1,6 +1,6 @@
 ---
 title: "Block Captains"
-updated: 2026-09-12
+updated: 2026-09-18
 description: "The Albany CERT Block Captain program."
 ---
 
@@ -27,7 +27,19 @@ Albany has 190 residential blocks. Block Captains currently cover a meaningful s
 them, with the most active gaps in apartment and condo buildings rather than any single
 neighborhood.
 
+The City of Albany has a revision of the Block Captain Manual available on the City
+website — it will prepare you for a disaster and help you organize your own home and
+family for such an event.
+
 ## How to sign up
 
-Email [AlbanyCERT@gmail.com](mailto:AlbanyCERT@gmail.com) with your contact information and
-which block you'd like to help organize.
+To confirm you are a Block Captain, email
+[AlbanyCERT@gmail.com](mailto:AlbanyCERT@gmail.com) with the following information:
+
+- Name
+- Street address
+- Block you are organizing
+- Cell phone number
+- Email address
+- CERT Trained? Y/N
+- GMRS call name if registered
