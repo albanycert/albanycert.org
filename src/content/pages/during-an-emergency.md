@@ -18,6 +18,27 @@ This page is for the moment itself — not training, not becoming a CERT member,
 "the ground is shaking, what do I do right now." For everything else — getting trained,
 joining a block, radio backup — see the rest of this site.
 
+## Free disaster-readiness guide (Listos California)
+
+<!-- This section carries over the live albanycert.org/ready page's wording verbatim
+     (checked 2026-09-18) — it's promotional/program content (a guide the household can
+     request), not itself a step-by-step emergency action, so it's kept out of the DRAFT
+     banner scope; the ready.gov-sourced action sections below remain DRAFT. -->
+Albany CERT is providing free disaster preparedness guides to every household in Albany.
+The guide offers step-by-step instructions, emergency checklists, and worksheets to help
+you and your family prepare for earthquakes, fires, power outages, and other
+emergencies. It helps you create a family emergency plan, gather essential supplies,
+secure your space against falling objects, practice "Drop, Cover, and Hold On," and
+protect important documents.
+
+Guides are available in 16 languages, including English, Chinese, Spanish, Japanese,
+Korean, Hindi, Vietnamese, Arabic, Farsi, Russian, Filipino, Armenian, Dari, Hmong,
+Punjabi, and Ukrainian. Language-specific guides aren't linked online yet — contact
+[AlbanyCERT@gmail.com](mailto:AlbanyCERT@gmail.com) to request one in your language.
+
+This project is supported by the California Governor's Office of Emergency Services
+(Cal OES) Listos California program.
+
 ## Earthquake
 
 - **Drop** where you are, onto your hands and knees.
